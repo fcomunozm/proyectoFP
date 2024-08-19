@@ -26,6 +26,9 @@ export class MenuComponent implements OnInit {
     this.isComicsMenuOpen = true;
     this.appService.clearFilter(); // Limpiar filtros
     this.router.navigate(['/home']);
+    this.isDcMenuOpen = false;
+    this.isMangaMenuOpen = false;
+    this.isMarvelMenuOpen = false;
   }
 
   goToContacto() {
@@ -40,18 +43,26 @@ export class MenuComponent implements OnInit {
 
   toggleComicsMenu() {
     this.isComicsMenuOpen = !this.isComicsMenuOpen;
+
   }
 
   toggleDcMenu() {
     this.isDcMenuOpen = !this.isDcMenuOpen;
+    this.isMangaMenuOpen = false;
+    this.isMarvelMenuOpen = false;
   }
 
   toggleMangaMenu() {
     this.isMangaMenuOpen = !this.isMangaMenuOpen;
+    this.isDcMenuOpen = false;
+    this.isMarvelMenuOpen = false;
   }
 
   toggleMarvelMenu() {
     this.isMarvelMenuOpen = !this.isMarvelMenuOpen;
+    this.isDcMenuOpen = false;
+    this.isMangaMenuOpen = false;
+
   }
 
   addFilter(field: string, value: string) {
