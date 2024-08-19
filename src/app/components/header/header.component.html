@@ -1,0 +1,19 @@
+<div class="col header">
+  <div class="contenedor">
+    <div class="box-menu">
+      <img src="/icons/menu.png" alt="" class="icon-menu" [ngClass]="{'active': isMenuOpen}" (click)="toggleMenu()">
+    </div>
+
+    <div class="nombre">
+      <img src="nombre.png" alt="" class="nombre-img">
+      <img src="/header/batman-lego.png" alt="" class="batman-lego">
+      <img src="/header/robin.png" alt="" class="robin-lego">
+    </div>
+
+    <div class="box-carrito">
+      <img src="icons/shopping-cart.png" alt="" class="icon-carrito" (click)="toggleCart()">
+    </div>
+  </div>
+</div>
+
+<app-compra *ngIf="isCartOpen"></app-compra>

@@ -1,0 +1,114 @@
+
+
+.header{
+  height: 25vh;
+  background-color: rgba(0, 0, 0);
+  border-bottom: 2px solid rgba(255, 255, 0, 0.315);
+
+}
+
+.contenedor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-menu{
+  display: flex;
+  justify-content: center;
+  height: 25%;
+  width: 20%;
+}
+
+.icon-menu {
+  cursor: pointer;
+  background-color: rgba(76, 0, 130, 0.4);
+  padding: 5px;
+  border-radius: 100%;
+  transform: scale(1.4);
+  transition: all 0.5s ease-in-out;
+}
+
+.icon-menu:hover {
+  background-color: rgba(76, 0, 130, 0.6);
+  transform: rotate(90deg) scale(1.4);
+}
+
+.icon-menu.active {
+  background-color: rgba(76, 0, 130, 0.6);
+  transform: rotate(90deg) scale(1.4);
+}
+
+.nombre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60%;
+  background: linear-gradient(to right, transparent, black, transparent);
+  position: relative;
+  transition: background 1s ease-in-out; /* Suaviza el cambio de fondo */
+  z-index: 2;
+}
+
+.nombre.animate-once {
+  animation: blinkBackground 1s ease-in-out forwards;
+}
+
+@keyframes blinkBackground {
+  from {
+    background: linear-gradient(to right, transparent, rgba(76, 0, 130, 0.5), transparent);
+  }
+  to {
+    background: linear-gradient(to right, transparent, rgba(111, 130, 0, 0.5), transparent);
+  }
+}
+
+.nombre.batman-robin-animate .batman-lego {
+  transform: translateY(3.5%) translateX(8%) scale(.07);
+  z-index: 1;
+}
+
+.nombre.batman-robin-animate .robin-lego {
+  transform: translateY(-1%) translateX(-25%) scale(.15) rotate(20deg);
+  z-index: 0;
+}
+
+.batman-lego {
+  transform: scale(.1) translateY(140%) translateX(180%);
+  position: absolute;
+  transition: transform 2s ease-in-out;
+  z-index: 1;
+}
+
+.robin-lego {
+  transform: scale(.05) translateX(-800%) translateY(-320%) rotate(60deg);
+  position: absolute;
+  transition: transform 3s;
+  z-index: 1;
+}
+.box-carrito{
+  display: flex;
+  justify-content: center;
+  height: 25%;
+  width: 20%;
+}
+
+.icon-carrito{
+  cursor: pointer;
+  background-color: rgba(76, 0, 130, 0.4);
+  padding: 5px;
+  border-radius: 100%;
+  transform: scale(1.4);
+  transition: all .5s ease-in-out;
+}
+
+.icon-carrito:hover{
+  background-color: rgba(76, 0, 130, 0.6);
+  transform: rotate(-45deg) scale(1.5);
+}
+

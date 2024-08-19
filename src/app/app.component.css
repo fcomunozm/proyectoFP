@@ -1,0 +1,33 @@
+.d-flex {
+  display: flex;
+  width: 100%; /* Asegura que el contenedor principal ocupe el 100% del ancho */
+  position: relative; /* Permite al menú usar posicionamiento absoluto */
+}
+
+.menu-container {
+  transition: transform 2s ease;
+  width: 16.66667%; /* Ancho del menú cuando está abierto */
+  transform: translateX(0); /* Posición inicial */
+  position: absolute; /* El menú se mueve fuera del flujo del diseño normal */
+  top: 0; /* Alineado con la parte superior */
+  height: 100%; /* Ocupa el alto completo */
+  z-index: 1; /* Asegura que el menú esté sobre el contenido */
+}
+
+.menu-open {
+  transform: translateX(0); /* Menú visible */
+}
+
+.menu-closed {
+  transform: translateX(-101%); /* Mueve el menú completamente fuera de la vista */
+}
+
+.content-container {
+  flex: 1; /* Ocupa el espacio restante disponible */
+  transition: margin-left 2s ease; /* Transición suave para el contenedor del contenido */
+  margin-left: 0; /* Sin margen cuando el menú está cerrado */
+}
+
+.menu-open ~ .content-container {
+  margin-left: 16.66667%; /* Reserva espacio para el menú cuando está abierto */
+}

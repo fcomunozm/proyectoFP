@@ -1,0 +1,44 @@
+<div class="contenedor" (click)="onContainerClick($event)">
+  <h2>Cesta</h2>
+  <img src="icons/x.png" alt="" class="cerrar" (click)="toggleCart()">
+  <hr>
+  <div *ngFor="let item of cartItems" class="producto">
+    <div class="body">
+      <ul>
+        <div class="titulo">
+          <li>
+            {{ item.titulo }}
+          </li>
+        </div>
+
+        <div class="precio-cantidad">
+          <div class="labels">
+            <p>Precio:</p>
+            <p><strong>{{ formatPrice(item.precioEspecial) }} €</strong></p>
+          </div>
+
+          <div class="labels">
+            <label for="">Cantidad:</label>
+            <input type="number" [(ngModel)]="item.cantidad" min="1" (change)="updateCantidad(item)">
+          </div>
+
+        </div>
+
+      </ul>
+    </div>
+
+    <div class="eliminar">
+      <img src="icons/trash.png" alt="" class="btn btn-danger borrar" (click)="removeFromCart(item)">
+    </div>
+  </div>
+  <hr>
+  <div class="box-compra">
+    <div class="total">
+      <p>Total: {{ formatPrice(getTotal()) }} €</p>
+    </div>
+
+    <button class="total2">
+      <a href="https://www.linkedin.com/in/fcomunozm/" target="_blank" rel="noopener noreferrer">Comprar</a>
+    </button>
+  </div>
+</div>

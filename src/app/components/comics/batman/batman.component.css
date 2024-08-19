@@ -1,0 +1,47 @@
+h2 {
+  color: #ffffff;
+}
+
+/* Estilo de las tarjetas */
+.card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  transition: all .5s ease;
+}
+
+.card:hover{
+  background-color: rgb(233, 233, 233);
+  transform: scale(1.01);
+}
+
+.card-img {
+  width: 80%;
+  height: auto;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.card-text span {
+  margin: 0 5px;
+}
+

@@ -1,0 +1,71 @@
+
+hr{
+  color: yellow;
+}
+
+.subtitulo{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: 10px;
+}
+
+.imagen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.precios{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.p-compra{
+  font-size: 30px;
+}
+
+.tachado{
+  text-decoration: line-through;
+  color: red;
+  font-size: 20px;
+}
+
+.row{
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+p{
+  margin: 0;
+}
+
+.datos{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+}
+
+.box-datos{
+  display: flex;
+
+
+}
+
+.box-datos .titulo{
+  width: 22%;
+  color: gray;
+  margin-right: 2px;
+}
+
+.datos1{
+  width: 100%;
+
+}

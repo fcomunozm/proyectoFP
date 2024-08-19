@@ -1,0 +1,75 @@
+<div class="container my-4">
+  <div *ngIf="errorMessage; else comicDetail">
+    <p class="alert alert-danger">{{ errorMessage }}</p>
+  </div>
+
+  <ng-template #comicDetail>
+    <div class="row">
+      <div class="col-md-3 imagen">
+        <img [src]="comic?.img" [alt]="comic?.titulo" class="img-fluid" />
+      </div>
+
+
+      <div class="col box text-white p-3">
+        <h2>{{ comic?.titulo }}</h2>
+        <hr>
+        <div class="subtitulo">
+          <div class="precios">
+            <p class="p-compra">{{ formatPrice(comic?.precioEspecial || 0) }} €</p>
+            <p class="tachado">{{ formatPrice(comic?.precioRegular || 0) }} €</p>
+          </div>
+          <div class="botones">
+            <button type="button" class="btn btn-success">Comprar</button>
+          </div>
+        </div>
+
+        <div class="datos mb-3">
+          <div class="datos1">
+            <div class="box-datos">
+              <p class="titulo">Autores:</p>
+              <p class="dato">{{ comic?.autores }}</p>
+            </div>
+
+            <div class="box-datos">
+              <p class="titulo">Coleccion:</p>
+              <p class="dato">{{ comic?.colecciones }}</p>
+            </div>
+
+
+            <div class="box-datos">
+              <p class="titulo">Editorial:</p>
+              <p class="dato">{{ comic?.editorial }}</p>
+            </div>
+
+            <div class="box-datos">
+              <p class="titulo">Serie:</p>
+              <p class="dato">{{ comic?.serie }}</p>
+            </div>
+          </div>
+
+          <div class="datos1">
+            <div class="box-datos">
+              <p class="titulo">ISBN:</p>
+              <p class="dato">{{ comic?.isbn }}</p>
+            </div>
+
+            <div class="box-datos">
+              <p class="titulo">Páginas:</p>
+              <p class="dato">{{ comic?.numeroDePaginas }}</p>
+            </div>
+
+          </div>
+
+        </div>
+        <p>{{ comic?.descripcion }}</p>
+      </div>
+
+    </div>
+  </ng-template>
+</div>
+
+
+
+
+
+

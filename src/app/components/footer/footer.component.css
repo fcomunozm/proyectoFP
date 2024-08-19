@@ -1,0 +1,49 @@
+.footer{
+  display: flex;
+  background-color: rgba(0, 0, 0);
+  border-top: 2px solid rgba(255, 255, 0, 0.315);
+  color: white;
+}
+
+.contenedor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 91%;
+  margin: 10px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.contenedor > div {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: .5px;
+}
+
+.contenedor > .first,
+.contenedor > .last {
+  flex: 2;
+}
+
+.contenedor > .nombre {
+  flex: 1;
+}
+
+.brand{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand img{
+  width: 40px;
+  height: 40px;
+}
+
+
+

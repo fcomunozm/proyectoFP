@@ -1,0 +1,61 @@
+.container{
+  color: white;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.cabecera{
+  margin-bottom: 40px;
+}
+
+legend{
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.formulario{
+  width: 80%;
+  margin: 20px auto;
+  color: white;
+  border: 2px solid yellow;
+  padding: 20px;
+  border-radius: 20px;
+
+}
+
+.box{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.grupo{
+  display: flex;
+  gap: 4px;
+}
+
+.invisible{
+ background-color: white;
+}
+
+.box-opciones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group .input-group-text:first-child {
+  width: 110px; /* Ancho fijo para el primer hijo */
+  text-align: center; /* Centra el texto dentro del span/label */
+  color: white; /* Color de texto blanco */
+}
+
+.box-enviar{
+  display: flex;
+  justify-content: center;
+}

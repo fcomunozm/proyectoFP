@@ -1,0 +1,38 @@
+.contenedor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  height: 70vh;
+
+}
+
+.body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  padding: 20px;
+
+}
+
+.img{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  opacity: .8;
+  height: 100%;
+
+}
+
+.batman{
+  width: auto;
+  height: 470px;
+}
+
+.joker{
+  height: 400px;
+}
+
+
